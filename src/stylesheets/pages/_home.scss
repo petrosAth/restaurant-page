@@ -7,55 +7,5 @@
 @use '../themes' as t;
 
 body {
-  background-color: a.theme-color('primary');
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100dvh;
-  overflow: hidden;
-  margin: 0;
-  padding: 20px;
-}
-
-.container {
-  background-color: a.theme-color('light');
-  border-radius: 10px;
-  box-shadow: t.$box-shadow;
-  padding: 50px 20px;
-  text-align: center;
-  max-width: 100%;
-  width: 600px;
-}
-
-h3 {
-  margin: 0;
-  opacity: 0.5;
-  margin-bottom: 30px;
-  letter-spacing: 2px;
-}
-
-img {
-  height: 150px;
-  margin: auto;
-  margin-bottom: 15px;
-}
-
-.btn {
-  background-color: a.theme-color('accent');
-  color: a.theme-color('light');
-  border: 0;
-  border-radius: 10px;
-  box-shadow: t.$box-shadow;
-  padding: 14px 40px;
-  font-size: 16px;
-  cursor: pointer;
-
-  &:active {
-    transform: scale(0.98);
-  }
-
-  &:focus {
-    outline: 0;
-  }
+  background-color: a.theme-color('background');
 }
