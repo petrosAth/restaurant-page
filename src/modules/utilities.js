@@ -4,13 +4,23 @@ const addCssClasses = (element, cssClasses) => {
   }
 };
 
-const createEl = (element, cssClasses, image) => {
+const addContent = (element, content) => {
+  if (element.nodeName === 'IMG') {
+    element.src = content;
+  } else {
+    element.textContent = content;
+  }
+};
+
+const createEl = (element, cssClasses, content) => {
   const newElement = document.createElement(element);
 
-  addCssClasses(newElement, cssClasses);
+  if (cssClasses !== undefined) {
+    addCssClasses(newElement, cssClasses);
+  }
 
-  if (element === 'img') {
-    newElement.src = image;
+  if (content !== undefined) {
+    addContent(newElement, content);
   }
 
   return newElement;
@@ -18,7 +28,13 @@ const createEl = (element, cssClasses, image) => {
 
 const appendCh = (elementPairs) => {
   elementPairs.forEach((pair) => {
-    pair[0].appendChild(pair[1]);
+    if (Array.isArray(pair[1])) {
+      pair[1].forEach((child) => {
+        pair[0].appendChild(child);
+      });
+    } else {
+      pair[0].appendChild(pair[1]);
+    }
   });
 };
 
