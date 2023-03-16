@@ -1,32 +1,28 @@
-const addCssClasses = (element, cssClasses) => {
-  if (cssClasses !== undefined) {
-    element.classList.add(...cssClasses);
-  }
-};
+const createNewNode = (element) => document.createElement(element);
+const addCssClasses = (node, cssClasses) => node.classList.add(...[].concat(cssClasses));
 
-const addContent = (element, content) => {
-  if (element.nodeName === 'IMG') {
-    element.src = content;
+const addContent = (node, content) => {
+  const element = {
+    IMG: () => (node.src = content),
+  };
+
+  if (node.nodeName in element) {
+    element[node.nodeName]();
   } else {
-    element.textContent = content;
+    node.textContent = content;
   }
 };
 
-const createEl = (element, cssClasses, content) => {
-  const newElement = document.createElement(element);
+const createNewElement = (element, cssClasses, content) => {
+  const newNode = createNewNode(element);
 
-  if (cssClasses !== undefined) {
-    addCssClasses(newElement, cssClasses);
-  }
+  if (cssClasses) addCssClasses(newNode, cssClasses);
+  if (content) addContent(newNode, content);
 
-  if (content !== undefined) {
-    addContent(newElement, content);
-  }
-
-  return newElement;
+  return newNode;
 };
 
-const appendCh = (elementPairs) => {
+const appendChildren = (elementPairs) => {
   elementPairs.forEach((pair) => {
     if (Array.isArray(pair[1])) {
       pair[1].forEach((child) => {
@@ -38,4 +34,4 @@ const appendCh = (elementPairs) => {
   });
 };
 
-export { createEl, appendCh };
+export { createNewElement, appendChildren };
