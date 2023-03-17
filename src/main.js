@@ -1,4 +1,4 @@
 import './stylesheets/main.scss';
 import pageLoad from './modules/pageLoad';
 
-pageLoad('contactUs');
+const load = pageLoad;
