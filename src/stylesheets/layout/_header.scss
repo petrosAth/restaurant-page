@@ -7,10 +7,10 @@
 @use '../themes' as t;
 
 .header {
+  margin: 1rem;
   .logo {
     &__img {
       width: min(30dvh, 30dvw);
-      margin: 2rem auto 1rem;
     }
   }
 }
