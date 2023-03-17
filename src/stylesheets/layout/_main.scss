@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the main of the site/application.
+// -----------------------------------------------------------------------------
+
+/// Load custom modules
+@use '../abstracts' as a;
+@use '../themes' as t;
+
+.content {
+  margin: 1rem 2rem;
+  flex: 1;
+}
