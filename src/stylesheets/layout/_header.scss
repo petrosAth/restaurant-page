@@ -1,3 +1,16 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+/// Load custom modules
+@use '../abstracts' as a;
+@use '../themes' as t;
+
+.header {
+  .logo {
+    &__img {
+      width: min(30dvh, 30dvw);
+      margin: 2rem auto;
+    }
+  }
+}
