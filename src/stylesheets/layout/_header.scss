@@ -9,8 +9,10 @@
 .header {
   margin: 1rem;
   .logo {
-    &__img {
-      width: min(30dvh, 30dvw);
-    }
+    height: 10rem;
+    background-image: url('../assets/images/logo.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
