@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the main nav of the site/application.
+// -----------------------------------------------------------------------------
+
+/// Load custom module
+@use '../abstracts' as a;
+@use '../themes' as t;
+
+.nav-menu {
+  margin: 1rem 2rem;
+  &__container {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
