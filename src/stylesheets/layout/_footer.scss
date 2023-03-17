@@ -1,3 +1,17 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+/// Load custom modules
+@use '../abstracts/' as a;
+@use '../themes' as t;
+
+.footer {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+
+  &__credentials {
+    @include a.text-setting(400);
+  }
+}
