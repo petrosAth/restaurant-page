@@ -9,15 +9,11 @@
 /// Theme colors
 /// Primary color
 /// @type Color
-$color-primary: hsl(207, 74%, 44%);
-
-/// Accent color
-/// @type Color
-$color-accent: hsl(199, 90%, 76%);
+$color-primary: hsl(35, 100%, 50%);
 
 /// Main text color
 /// @type Color
-$color-text-light: hsl(0, 0%, 100%);
+$color-text-light: hsl(0, 0%, 99%);
 
 /// Accent text color
 /// @type Color
@@ -25,11 +21,11 @@ $color-text-dark: hsl(0, 0%, 1%);
 
 /// Foreground color
 /// @type Color
-$color-foreground: hsl(0, 0%, 100%);
+$color-foreground: hsl(35, 100%, 15%);
 
 /// Background color
 /// @type Color
-$color-background: hsl(214, 32%, 91%);
+$color-background: hsl(32, 100%, 3%);
 
 /// Shadow color
 /// @type Color
@@ -37,11 +33,11 @@ $color-shadow: hsl(0, 0%, 1%);
 
 /// Error color
 /// @type Color
-$color-error: hsl(0, 75%, 50%);
+$color-error: hsl(354, 100%, 50%);
 
 /// Success color
 /// @type Color
-$color-success: hsl(120, 55%, 50%);
+$color-success: hsl(134, 100%, 50%);
 
 // -----------------------------------------------------------------------------
 
@@ -53,12 +49,6 @@ $theme-colors: (
     'base': $color-primary,
     'dark': darken($color-primary, 5),
     'disabled': color.adjust($color-primary, $alpha: -0.65),
-  ),
-  'accent': (
-    'light': lighten($color-accent, 5),
-    'base': $color-accent,
-    'dark': darken($color-accent, 5),
-    'disabled': color.adjust($color-accent, $alpha: -0.5),
   ),
   'light': (
     'light': lighten($color-text-light, 5),
