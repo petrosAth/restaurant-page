@@ -13,6 +13,7 @@
 
 body {
   font-family: a.$font-stack-primary;
-  background-color: a.theme-color('background', 'base');
   @include a.text-setting(400);
+  color: a.theme-color('light');
+  background-color: a.theme-color('background');
 }
