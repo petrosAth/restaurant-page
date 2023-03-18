@@ -1,13 +1,29 @@
 import * as utils from '../../utilities';
+import imageBurgerHome from '../../../assets/images/burger-home.jpg';
 
 const home = () => {
-  const home = utils.createNewElement(
-    'div',
-    'content__home',
-    'Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.'
+  const contentHome = utils.createNewElement('div', 'content__home');
+  const homeImage = utils.createNewElement('img', 'home__image', imageBurgerHome);
+  const homeBooking = utils.createNewElement('div', 'home__booking');
+  const homeBookingTextFirstLine = utils.createNewElement(
+    'p',
+    ['home__booking__text', 'text__firstLine'],
+    'The BEST burger '
   );
+  const homeBookingTextSecondLine = utils.createNewElement(
+    'p',
+    ['home__booking__text', 'text__secondLine'],
+    'in town...'
+  );
+  const homeBookingButton = utils.createNewElement('button', ['button', 'home__booking__button'], 'Order now');
 
-  return home;
+  utils.appendChildren([
+    [homeBooking, [homeBookingTextFirstLine, homeBookingTextSecondLine, homeBookingButton]],
+    [contentHome, homeImage],
+    [contentHome, homeBooking],
+  ]);
+
+  return contentHome;
 };
 
 export default home;

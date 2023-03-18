@@ -73,6 +73,7 @@ $theme-colors: (
     'base': $color-background,
     'dark': darken($color-background, 5),
     'disabled': color.adjust($color-background, $alpha: -0.5),
+    'transparent': color.adjust($color-background, $alpha: -0.15),
   ),
   'error': (
     'light': lighten($color-error, 5),
