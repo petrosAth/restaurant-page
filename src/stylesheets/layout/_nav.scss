@@ -9,6 +9,7 @@
 .nav-menu {
   padding: 0.25rem 1rem 1rem;
   border-bottom: 0.075rem solid a.theme-color('light');
+  font-family: a.$font-stack-accent;
 
   &__container {
     display: flex;

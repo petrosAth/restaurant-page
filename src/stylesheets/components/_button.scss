@@ -1,3 +1,12 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+/// Load custom module
+@use '../abstracts' as a;
+@use '../themes' as t;
+
+.button {
+  color: a.theme-color('primary');
+  font-family: a.$font-stack-accent;
+}
