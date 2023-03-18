@@ -10,6 +10,8 @@
   padding: 0.25rem 1rem 1rem;
   border-bottom: 0.075rem solid a.theme-color('light');
   font-family: a.$font-stack-accent;
+  @include a.text-setting(500);
+  line-height: 1;
 
   &__container {
     display: flex;
