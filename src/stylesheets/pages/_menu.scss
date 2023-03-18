@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the menu page.
+// -----------------------------------------------------------------------------
+
+/// Load custom modules
+@use '../abstracts' as a;
+@use '../themes' as t;
+
+.content__menu {
+  .menu__item {
+    margin: 2rem auto;
+    display: flex;
+    max-width: min(900px, 80dvw);
+    align-items: center;
+
+    .item__desc {
+      padding: 2rem;
+      &__title {
+        color: a.theme-color('primary');
+        @include a.text-setting(700);
+        text-align: right;
+        border-bottom: 0.075rem solid a.theme-color('primary');
+        line-height: 1;
+        padding-bottom: 0.625rem;
+        margin-bottom: 0.625rem;
+      }
+      &__text {
+        text-align: right;
+      }
+    }
+
+    .item__image {
+      border-radius: a.$border-radius;
+      max-width: 50%;
+    }
+  }
+
+  .menu__item:nth-child(2n) {
+    flex-direction: row-reverse;
+    & > * > {
+      & p,
+      & h2 {
+        text-align: left;
+      }
+    }
+  }
+}

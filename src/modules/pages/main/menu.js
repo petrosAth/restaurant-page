@@ -1,13 +1,40 @@
 import * as utils from '../../utilities';
+import imageBurger01 from '../../../assets/images/burger-menu-01.jpg';
+import imageBurger02 from '../../../assets/images/burger-menu-02.jpg';
+
+const createMenuItem = (title, desc, image) => {
+  const menuItem = utils.createNewElement('div', 'menu__item');
+  const itemImage = utils.createNewElement('img', 'item__image', image);
+  const itemDesc = utils.createNewElement('div', 'item__desc');
+  const itemDescTitle = utils.createNewElement('h2', 'item__desc__title', title);
+  const itemDescText = utils.createNewElement('p', 'item__desc__text', desc);
+
+  utils.appendChildren([
+    [itemDesc, [itemDescTitle, itemDescText]],
+    [menuItem, [itemDesc, itemImage]],
+  ]);
+
+  return menuItem;
+};
 
 const menu = () => {
-  const menu = utils.createNewElement(
-    'main',
-    'content__menu',
-    'Lorem ipsum dolor sit amet, anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.'
-  );
+  const contentMenu = utils.createNewElement('div', 'content__menu');
+  const menuItems = [
+    createMenuItem(
+      'Classic Burger',
+      'Our not-so-basic burger topped with shredded parmesan cheese, arugula, bacon and smoky barbecue sauce',
+      imageBurger01
+    ),
+    createMenuItem(
+      'Mushroom Swiss Burger',
+      'Ten ounces of angus beef topped with melted swiss cheese, pepper, lettuce, bacon and sautéed mushrooms',
+      imageBurger02
+    ),
+  ];
 
-  return menu;
+  utils.appendChildren([[contentMenu, [...menuItems]]]);
+
+  return contentMenu;
 };
 
 export default menu;

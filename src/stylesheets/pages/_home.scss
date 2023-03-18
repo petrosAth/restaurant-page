@@ -17,7 +17,7 @@
 
   .home__image {
     background-color: a.theme-color('foreground');
-    border-radius: 1.25rem;
+    border-radius: a.$border-radius;
     grid-column: 1 / 5;
     grid-row: 1 / 2;
     height: 100%;
@@ -30,14 +30,14 @@
     grid-column: 4 / -1;
     grid-row: 1 / 2;
     border: 0.075rem solid a.theme-color('primary');
-    border-radius: 1.25rem;
-    padding: 4rem;
+    border-radius: a.$border-radius;
+    padding: 3rem 4rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
     &__text {
-      @include a.text-setting(900);
+      @include a.text-setting(800);
       line-height: 1;
     }
 
