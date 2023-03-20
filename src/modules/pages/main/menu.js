@@ -3,11 +3,11 @@ import imageBurger01 from '../../../assets/images/burger-menu-01.jpg';
 import imageBurger02 from '../../../assets/images/burger-menu-02.jpg';
 
 const createMenuItem = (title, desc, image) => {
-  const menuItem = utils.createNewElement('div', 'menu__item');
-  const itemImage = utils.createNewElement('img', 'item__image', image);
-  const itemDesc = utils.createNewElement('div', 'item__desc');
-  const itemDescTitle = utils.createNewElement('h2', 'item__desc__title', title);
-  const itemDescText = utils.createNewElement('p', 'item__desc__text', desc);
+  const menuItem = utils.createNewElement('div', { classes: 'menu__item' });
+  const itemImage = utils.createNewElement('img', { classes: 'item__image' }, image);
+  const itemDesc = utils.createNewElement('div', { classes: 'item__desc' });
+  const itemDescTitle = utils.createNewElement('h2', { classes: 'item__desc__title' }, title);
+  const itemDescText = utils.createNewElement('p', { classes: 'item__desc__text' }, desc);
 
   utils.appendChildren([
     [itemDesc, [itemDescTitle, itemDescText]],
@@ -18,7 +18,7 @@ const createMenuItem = (title, desc, image) => {
 };
 
 const menu = () => {
-  const contentMenu = utils.createNewElement('div', 'content__menu');
+  const contentMenu = utils.createNewElement('div', { classes: 'content__menu' });
   const menuItems = [
     createMenuItem(
       'Classic Burger',

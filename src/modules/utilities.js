@@ -1,5 +1,13 @@
 const createNewNode = (element) => document.createElement(element);
-const addCssClasses = (node, cssClasses) => node.classList.add(...[].concat(cssClasses));
+
+const addClassesAndId = (node, classesAndId) => {
+  if (classesAndId.classes) {
+    node.classList.add(...[].concat(classesAndId.classes));
+  }
+  if (classesAndId.id) {
+    node.setAttribute('id', classesAndId.id);
+  }
+};
 
 const addContent = (node, content) => {
   const element = {
@@ -13,10 +21,10 @@ const addContent = (node, content) => {
   }
 };
 
-const createNewElement = (element, cssClasses, content) => {
+const createNewElement = (element, classesAndId, content) => {
   const newNode = createNewNode(element);
 
-  if (cssClasses) addCssClasses(newNode, cssClasses);
+  if (classesAndId) addClassesAndId(newNode, classesAndId);
   if (content) addContent(newNode, content);
 
   return newNode;

@@ -5,15 +5,15 @@ const load = pageLoad;
 
 (() => {
   const menuButtons = {
-    btnHome: '.nav-menu__button__home',
-    btnMenu: '.nav-menu__button__menu',
-    btnContact: '.nav-menu__button__contactUs',
+    Home: 'menuButtonHome',
+    Menu: 'menuButtonMenu',
+    ContactUs: 'menuButtonContactUs',
   };
 
   Object.keys(menuButtons).forEach((button) => {
-    const btn = menuButtons[button];
-    document.querySelector(btn).addEventListener('click', () => {
-      load(btn.replace('.nav-menu__button__', ''));
+    console.log(button);
+    document.querySelector(`#${menuButtons[button]}`).addEventListener('click', () => {
+      load(menuButtons[button]);
     });
   });
 

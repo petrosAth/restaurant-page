@@ -4,7 +4,7 @@ import menu from './menu.js';
 import contactUs from './contactUs.js';
 
 const main = () => {
-  const main = utils.createNewElement('main', 'content');
+  const main = utils.createNewElement('main', { classes: 'content' });
 
   utils.appendChildren([
     [main, home()],
@@ -15,9 +15,9 @@ const main = () => {
 const changeMain = (page) => {
   const main = document.querySelector('.content');
   const content = {
-    home: () => home(),
-    menu: () => menu(),
-    contactUs: () => contactUs(),
+    menuButtonHome: () => home(),
+    menuButtonMenu: () => menu(),
+    menuButtonContactUs: () => contactUs(),
   };
 
   main.replaceChildren(content[page]());

@@ -1,24 +1,32 @@
 import * as utils from '../utilities';
 
 const nav = () => {
-  const nav = utils.createNewElement('nav', 'nav-menu');
-  const ul = utils.createNewElement('ul', 'nav-menu__container');
-  const liHome = utils.createNewElement('li', 'nav-menu__option');
-  const btnHome = utils.createNewElement('button', ['button', 'nav-menu__button', 'nav-menu__button__home'], 'home');
-  const liMenu = utils.createNewElement('li', 'nav-menu__option');
-  const btnMenu = utils.createNewElement('button', ['button', 'nav-menu__button', 'nav-menu__button__menu'], 'menu');
-  const liContact = utils.createNewElement('li', 'nav-menu__option');
-  const btnContact = utils.createNewElement(
+  const nav = utils.createNewElement('nav', { classes: 'nav-menu' });
+  const ul = utils.createNewElement('ul', { classes: 'nav-menu__container' });
+  const listHome = utils.createNewElement('li', { classes: 'nav-menu__option' });
+  const buttonHome = utils.createNewElement(
     'button',
-    ['button', 'nav-menu__button', 'nav-menu__button__contactUs'],
+    { classes: ['button', 'nav-menu__button', 'nav-menu__button__home'], id: 'menuButtonHome' },
+    'home'
+  );
+  const listMenu = utils.createNewElement('li', { classes: 'nav-menu__option' });
+  const buttonMenu = utils.createNewElement(
+    'button',
+    { classes: ['button', 'nav-menu__button', 'nav-menu__button__menu'], id: 'menuButtonMenu' },
+    'menu'
+  );
+  const listContactUs = utils.createNewElement('li', { classes: 'nav-menu__option' });
+  const buttonContactUs = utils.createNewElement(
+    'button',
+    { classes: ['button', 'nav-menu__button', 'nav-menu__button__contactUs'], id: 'menuButtonContactUs' },
     'contact us'
   );
 
   utils.appendChildren([
-    [liHome, btnHome],
-    [liMenu, btnMenu],
-    [liContact, btnContact],
-    [ul, [liHome, liMenu, liContact]],
+    [listHome, buttonHome],
+    [listMenu, buttonMenu],
+    [listContactUs, buttonContactUs],
+    [ul, [listHome, listMenu, listContactUs]],
     [nav, ul],
     [document.body, nav],
   ]);
