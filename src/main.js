@@ -1,21 +1,34 @@
 import './stylesheets/main.scss';
 import pageLoad from './modules/pageLoad';
 
-const load = pageLoad;
+const orderButton = (setMain) => {
+  const orderButton = document.querySelector('#homeButtonOrder');
 
-(() => {
-  const menuButtons = {
-    Home: 'menuButtonHome',
-    Menu: 'menuButtonMenu',
-    ContactUs: 'menuButtonContactUs',
+  orderButton.addEventListener('click', () => {
+    setMain('menuButtonContactUs');
+  });
+};
+
+const menuButtons = (setMain) => {
+  const buttonsID = {
+    home: 'menuButtonHome',
+    menu: 'menuButtonMenu',
+    contactUs: 'menuButtonContactUs',
   };
 
-  Object.keys(menuButtons).forEach((button) => {
-    console.log(button);
-    document.querySelector(`#${menuButtons[button]}`).addEventListener('click', () => {
-      load(menuButtons[button]);
+  Object.keys(buttonsID).forEach((page) => {
+    document.querySelector(`#${buttonsID[page]}`).addEventListener('click', () => {
+      setMain(buttonsID[page]);
+      if (page === 'home') {
+        orderButton(setMain);
+      }
     });
   });
+};
 
-  return;
+(() => {
+  const setMain = pageLoad;
+
+  menuButtons(setMain);
+  orderButton(setMain);
 })();
