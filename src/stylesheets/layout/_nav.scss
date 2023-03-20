@@ -18,5 +18,38 @@
     list-style: none;
     justify-content: center;
     gap: 2rem;
+
+    .nav-menu__button {
+      border-color: a.theme-color('dark');
+      background-color: a.theme-color(dark);
+      color: a.theme-color('primary');
+      padding-inline: 0.625rem;
+
+      &:focus-visible {
+        box-shadow: none;
+        outline: none;
+        border-color: a.theme-color('primary', 'light');
+        background-color: a.theme-color('dark');
+      }
+      &:hover:not(:disabled) {
+        background-color: a.theme-color('dark');
+        border-color: a.theme-color('primary', 'dark');
+      }
+      &:focus {
+        border-color: a.theme-color('background');
+        outline: 0.0675rem solid a.theme-color('primary');
+      }
+      &:disabled {
+        background-color: a.theme-color('primary', 'transparent');
+        color: a.theme-color('dark', 'transparent');
+        cursor: default;
+      }
+      &:active:not(:disabled) {
+        background-color: a.theme-color('primary', 'light');
+        border-color: a.theme-color('primary', 'light');
+        color: a.theme-color('dark');
+        outline: none;
+      }
+    }
   }
 }

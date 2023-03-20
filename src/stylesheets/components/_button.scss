@@ -10,7 +10,7 @@
   color: a.theme-color('dark');
   background-color: a.theme-color('primary');
   font-family: a.$font-stack-accent;
-  border-radius: 1rem;
+  border-radius: a.$border-radius;
   padding: 0.125rem 2rem;
   line-height: 1;
   cursor: pointer;

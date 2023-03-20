@@ -60,6 +60,7 @@
           width: 100%;
           background: none;
           border: 0.075rem solid a.theme-color('primary');
+          border-radius: a.$border-radius;
         }
 
         *::placeholder {
@@ -70,6 +71,11 @@
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           gap: 1rem;
+        }
+        .form__button-container {
+          .form__button {
+            padding: 0.625rem 2rem;
+          }
         }
       }
     }

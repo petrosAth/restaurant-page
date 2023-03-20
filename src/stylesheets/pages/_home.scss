@@ -42,10 +42,10 @@
     }
 
     &__button {
-      padding-top: 4rem;
       @include a.text-setting(700);
-      line-height: 1;
       font-weight: 600;
+      margin-top: 3rem;
+      border-radius: 1rem;
     }
   }
 }
