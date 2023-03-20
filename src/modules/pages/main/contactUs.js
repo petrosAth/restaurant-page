@@ -59,7 +59,7 @@ const contactUs = () => {
     'email',
     'required',
     'Your Email',
-    'text'
+    'email'
   );
   const formSubject = utils.createNewElement('div', { classes: 'form__subject' });
   const formSubjectLabel = utils.createNewElement('label', { classes: 'form__subject' });
