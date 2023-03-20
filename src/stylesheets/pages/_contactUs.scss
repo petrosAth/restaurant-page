@@ -1,0 +1,77 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the contact us page.
+// -----------------------------------------------------------------------------
+
+/// Load custom modules
+@use '../abstracts' as a;
+@use '../themes' as t;
+
+.content__contact-us {
+  display: flex;
+  flex-direction: column;
+
+  .contact-us__title {
+    text-align: center;
+    padding-bottom: 3rem;
+    @include a.text-setting(800);
+    font-weight: 600;
+  }
+
+  .contact-us__container {
+    @include a.text-setting(500);
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+
+    .contact-us__contact {
+      .contact__address,
+      .contact__phone,
+      .contact__email {
+        padding-bottom: 1rem;
+      }
+
+      .address__title,
+      .phone__title,
+      .email__title {
+        font-weight: 600;
+        line-height: 1.5rem;
+      }
+
+      .address__text,
+      .phone__text,
+      .email__text {
+        color: a.theme-color('primary');
+        line-height: 1;
+      }
+    }
+
+    .contact-us__booking {
+      .booking__form {
+        display: grid;
+        grid-template-rows: 1fr 1fr 2fr;
+        align-items: top;
+        gap: 1rem;
+
+        input,
+        textarea {
+          line-height: 1;
+          padding: 0.75rem;
+          height: 100%;
+          width: 100%;
+          background: none;
+          border: 0.075rem solid a.theme-color('primary');
+        }
+
+        *::placeholder {
+          color: a.theme-color('light', 'transparent');
+        }
+
+        .form__personal-details {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+      }
+    }
+  }
+}
