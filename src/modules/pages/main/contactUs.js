@@ -38,8 +38,8 @@ const contactUs = () => {
   const contactEmail = utils.createNewElement('div', { classes: 'contact__email' });
   const emailTitle = utils.createNewElement('h3', { classes: 'email__title' }, 'Email Address');
   const emailText = utils.createNewElement('p', { classes: 'email__text' }, 'contact@thebest.burger');
-  const contactUsBooking = utils.createNewElement('div', { classes: 'contact-us__booking' });
-  const bookingForm = utils.createNewElement('form', { classes: 'booking__form' });
+  const contactUsOrder = utils.createNewElement('div', { classes: 'contact-us__order' });
+  const orderForm = utils.createNewElement('form', { classes: 'order__form' });
   const formPersonalDetails = utils.createNewElement('div', { classes: 'form__personal-details' });
   const formName = utils.createNewElement('div', { classes: 'form__name' });
   const formNameLabel = utils.createNewElement('label', { classes: 'form__name' });
@@ -94,10 +94,10 @@ const contactUs = () => {
     [formMessage, [formMessageLabel, formMessageInput]],
     [formButtonContainer, formButton],
     [formPersonalDetails, [formName, formEmail]],
-    [bookingForm, [formPersonalDetails, formSubject, formMessage, formButtonContainer]],
-    [contactUsBooking, bookingForm],
+    [orderForm, [formPersonalDetails, formSubject, formMessage, formButtonContainer]],
+    [contactUsOrder, orderForm],
     [contactUsContact, [contactAddress, contactPhone, contactEmail]],
-    [contactUsContainer, [contactUsContact, contactUsBooking]],
+    [contactUsContainer, [contactUsContact, contactUsOrder]],
     [contentContactUs, [contactUsTitle, contactUsContainer]],
   ]);
 
