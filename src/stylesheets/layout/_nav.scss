@@ -20,6 +20,7 @@
     gap: 2rem;
 
     .nav-menu__button {
+      text-transform: uppercase;
       border-color: a.theme-color('dark');
       background-color: a.theme-color(dark);
       color: a.theme-color('primary');
