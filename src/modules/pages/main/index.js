@@ -12,7 +12,7 @@ const main = () => {
   ]);
 };
 
-const changeMain = (page) => {
+const setMain = (page) => {
   const main = document.querySelector('.content');
   const content = {
     menuButtonHome: () => home(),
@@ -23,4 +23,4 @@ const changeMain = (page) => {
   main.replaceChildren(content[page]());
 };
 
-export { main, changeMain };
+export { main, setMain };

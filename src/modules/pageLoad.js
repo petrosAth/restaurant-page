@@ -1,6 +1,6 @@
 import header from './pages/header';
 import nav from './pages/nav';
-import { main, changeMain } from './pages/main';
+import { main, setMain } from './pages/main';
 import footer from './pages/footer';
 
 const pageLoad = (() => {
@@ -9,7 +9,7 @@ const pageLoad = (() => {
   main();
   footer();
 
-  return changeMain;
+  return setMain;
 })();
 
 export default pageLoad;
