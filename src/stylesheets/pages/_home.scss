@@ -16,16 +16,16 @@
   align-items: center;
 
   .home__image {
+    justify-self: left;
     background-color: a.theme-color('foreground');
     border-radius: a.$border-radius;
     grid-column: 3 / -1;
     grid-row: 1 / 2;
-    height: 100%;
-    justify-self: right;
+    max-height: 100%;
   }
 
   .home__order {
-    justify-self: left;
+    justify-self: right;
     background-color: a.theme-color('background', 'transparent');
     grid-column: 1 / 4;
     grid-row: 1 / 2;
