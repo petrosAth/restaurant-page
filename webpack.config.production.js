@@ -14,16 +14,6 @@ module.exports = {
     filename: '[name].[contenthash].js',
     assetModuleFilename: '[name][ext]',
   },
-  devtool: 'source-map',
-  devServer: {
-    static: {
-      directory: path.resolve(__dirname, 'dist'),
-    },
-    port: 8080,
-    hot: true,
-    compress: true,
-    historyApiFallback: true,
-  },
   module: {
     rules: [
       {
