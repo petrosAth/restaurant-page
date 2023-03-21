@@ -5,7 +5,7 @@ usage.
 
 ## Live preview
 
-[restaurant-page]()
+[restaurant-page](https://petrosath.github.io/restaurant-page/)
 
 ## Languages
 
