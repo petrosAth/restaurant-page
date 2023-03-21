@@ -7,19 +7,19 @@ const nav = () => {
   const buttonHome = utils.createNewElement(
     'button',
     { classes: ['button', 'nav-menu__button', 'nav-menu__button__home'], id: 'menuButtonHome' },
-    'home'
+    { text: 'home' }
   );
   const listMenu = utils.createNewElement('li', { classes: 'nav-menu__option' });
   const buttonMenu = utils.createNewElement(
     'button',
     { classes: ['button', 'nav-menu__button', 'nav-menu__button__menu'], id: 'menuButtonMenu' },
-    'menu'
+    { text: 'menu' }
   );
   const listContactUs = utils.createNewElement('li', { classes: 'nav-menu__option' });
   const buttonContactUs = utils.createNewElement(
     'button',
     { classes: ['button', 'nav-menu__button', 'nav-menu__button__contactUs'], id: 'menuButtonContactUs' },
-    'contact us'
+    { text: 'contact us' }
   );
 
   utils.appendChildren([

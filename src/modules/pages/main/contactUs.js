@@ -22,22 +22,22 @@ const createFormElement = (element, id, name, required, placeholder, type) => {
 
 const contactUs = () => {
   const contentContactUs = utils.createNewElement('div', { classes: 'content__contact-us' });
-  const contactUsTitle = utils.createNewElement('h2', { classes: 'contact-us__title' }, 'Get in touch');
+  const contactUsTitle = utils.createNewElement('h2', { classes: 'contact-us__title' }, { text: 'Get in touch' });
   const contactUsContainer = utils.createNewElement('div', { classes: 'contact-us__container' });
   const contactUsContact = utils.createNewElement('div', { classes: 'contact-us__contact' });
   const contactAddress = utils.createNewElement('div', { classes: 'contact__address' });
-  const addressTitle = utils.createNewElement('h3', { classes: 'address__title' }, 'Address');
+  const addressTitle = utils.createNewElement('h3', { classes: 'address__title' }, { text: 'Address' });
   const addressText = utils.createNewElement(
     'p',
     { classes: 'address__text' },
     '12 Street, City Name, ZIP Code, Country'
   );
   const contactPhone = utils.createNewElement('div', { classes: 'contact__phone' });
-  const phoneTitle = utils.createNewElement('h3', { classes: 'phone__title' }, 'Phone Number');
-  const phoneText = utils.createNewElement('p', { classes: 'phone__text' }, '+1 234 567 890');
+  const phoneTitle = utils.createNewElement('h3', { classes: 'phone__title' }, { text: 'Phone Number' });
+  const phoneText = utils.createNewElement('p', { classes: 'phone__text' }, { text: '+1 234 567 890' });
   const contactEmail = utils.createNewElement('div', { classes: 'contact__email' });
-  const emailTitle = utils.createNewElement('h3', { classes: 'email__title' }, 'Email Address');
-  const emailText = utils.createNewElement('p', { classes: 'email__text' }, 'contact@thebest.burger');
+  const emailTitle = utils.createNewElement('h3', { classes: 'email__title' }, { text: 'Email Address' });
+  const emailText = utils.createNewElement('p', { classes: 'email__text' }, { text: 'contact@thebest.burger' });
   const contactUsOrder = utils.createNewElement('div', { classes: 'contact-us__order' });
   const orderForm = utils.createNewElement('form', { classes: 'order__form' });
   const formPersonalDetails = utils.createNewElement('div', { classes: 'form__personal-details' });
@@ -81,13 +81,12 @@ const contactUs = () => {
     'Message'
   );
   const formButtonContainer = utils.createNewElement('div', { classes: 'form__button-container' });
-  const formButton = utils.createNewElement('button', { classes: ['button', 'form__button'] }, 'Place an Order');
+  const formButton = utils.createNewElement('button', { classes: ['button', 'form__button'] }, { text: 'Place an Order' });
 
   utils.appendChildren([
     [contactAddress, [addressTitle, addressText]],
     [contactPhone, [phoneTitle, phoneText]],
     [contactEmail, [emailTitle, emailText]],
-    // [contactFollow, []]
     [formName, [formNameLabel, formNameInput]],
     [formEmail, [formEmailLabel, formEmailInput]],
     [formSubject, [formSubjectLabel, formSubjectInput]],
@@ -102,6 +101,6 @@ const contactUs = () => {
   ]);
 
   return contentContactUs;
-};
+  };
 
 export default contactUs;

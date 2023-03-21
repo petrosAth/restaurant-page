@@ -4,10 +4,10 @@ import imageBurger02 from '../../../assets/images/burger-menu-02.jpg';
 
 const createMenuItem = (title, desc, image) => {
   const menuItem = utils.createNewElement('div', { classes: 'menu__item' });
-  const itemImage = utils.createNewElement('img', { classes: 'item__image' }, image);
+  const itemImage = utils.createNewElement('img', { classes: 'item__image' }, { image: image });
   const itemDesc = utils.createNewElement('div', { classes: 'item__desc' });
-  const itemDescTitle = utils.createNewElement('h2', { classes: 'item__desc__title' }, title);
-  const itemDescText = utils.createNewElement('p', { classes: 'item__desc__text' }, desc);
+  const itemDescTitle = utils.createNewElement('h2', { classes: 'item__desc__title' }, { text: title  });
+  const itemDescText = utils.createNewElement('p', { classes: 'item__desc__text' }, { text: desc  });
 
   utils.appendChildren([
     [itemDesc, [itemDescTitle, itemDescText]],

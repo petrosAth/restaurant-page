@@ -11,13 +11,18 @@ const addClassesAndId = (node, classesAndId) => {
 
 const addContent = (node, content) => {
   const element = {
-    IMG: () => (node.src = content),
+    IMG: () => (node.src = content.image || ''),
+    A: () => {
+      node.href = content.link || '';
+      node.textContent = content.text || '';
+      node.target = content.newTab || '';
+    },
   };
 
   if (node.nodeName in element) {
     element[node.nodeName]();
   } else {
-    node.textContent = content;
+    node.textContent = content.text;
   }
 };
 
