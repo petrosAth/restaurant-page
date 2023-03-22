@@ -1,17 +1,21 @@
 # About
 
-A simple restaurant website. Built for practicing on Webpack configuration and
-usage.
+A simple restaurant website.
 
-## Live preview
+The main objectives of this project was to practice on the use and configuration
+of [`Webpack`](https://webpack.js.org/), and the use of JavaScript ES6 modules.
 
-[restaurant-page](https://petrosath.github.io/restaurant-page/)
+This website was created as part of
+[The Odin Project](https://www.theodinproject.com/), an online course on web
+development.
+
+> [Live preview](https://petrosath.github.io/restaurant-page/)
 
 ## Languages
 
 - `HTML`
 - `SCSS`: Used for styling utilizing the 7-1 file structure
-- `JavaScript`
+- `JavaScript`: Separated the code in modules based on function and utility
 
 ## Tools
 
@@ -19,9 +23,8 @@ usage.
 - [`Babel`](https://github.com/babel/babel)
   - [`Babel preset-env`](https://babeljs.io/docs/babel-preset-env.html): Enables
     the use of the latest JavaScript without needing to micromanage which syntax
-    transforms (and optionally, browser polyfills) are needed by the target
-    environment
-- [`SASS`](https://sass-lang.com/): It is a CSS extension that is used to add
+    transforms are needed by the target environment
+- [`SASS`](https://sass-lang.com/): It is a CSS extension that' s used to add
   features like variables, nested rules, mixins, inline imports, inheritance and
   more, all with fully CSS-compatible syntax.
 - [`PostCSS`](https://postcss.org/): A tool for transforming CSS with JavaScript
